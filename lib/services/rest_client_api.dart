@@ -31,7 +31,7 @@ abstract class RestClient {
   @POST("/chat/completions")
   @Headers(<String, dynamic>{
     "Content-Type" : "application/json",
-    'Authorization': 'Bearer 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',
+    'Authorization': 'Bearer $API_KEY',
   })
   Future<ChatCompletionResponse> sendMessageChatCompletions(@Body() Map<String, dynamic> map);
 
@@ -40,7 +40,7 @@ abstract class RestClient {
   @POST("/completions")
   @Headers(<String, dynamic>{
     "Content-Type" : "application/json",
-    'Authorization': 'Bearer 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',
+    'Authorization': 'Bearer $API_KEY',
   })
   Future<CompletionResponse> sendMessageCompletions(@Body() Map<String, dynamic> map);
 
